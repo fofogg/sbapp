@@ -3,23 +3,29 @@ export UUID=${UUID-1eb6e917774b4a84aff6b058577c60a5}
 
 echo '
  {
-    "inbounds": [
-        {
-            "type": "trojan",
-            "listen": "::",
-            "listen_port": '$PORT',
-            "users": [
-                {
-                    "password": "'$UUID'"
-                }
-            ],
-            "transport": {
-                "type": "ws",
-                "path": "/'$UUID'/trojan",
-                "early_data_header_name": "Sec-WebSocket-Protocol"
-            }
-        }
-    ]
+  "log": {
+    "loglevel": "debug"
+  },
+  "inbounds": [
+    {
+      "listen": "127.0.0.1",
+      "port": '$PORT',
+      "protocol": "vmess",
+      "settings": {
+        "clients": [
+          {
+            "id": "'$UUID'",
+            "alterId": 0
+          }
+        ]
+      }
+    }
+  ],
+  "outbounds": [
+    {
+      "protocol": "freedom"
+    }
+  ]
 }
 ' > config.json
 
