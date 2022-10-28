@@ -1,20 +1,19 @@
-export PORT=${PORT-8080}
-export UUID=${UUID-1eb6e917774b4a84aff6b058577c60a5}
+
 
 echo '
- {
+{
   "log": {
     "loglevel": "debug"
   },
   "inbounds": [
     {
-      "listen": "127.0.0.1",
-      "port": '$PORT',
+      "listen": "0.0.0.0",
+      "port": 80,
       "protocol": "vmess",
       "settings": {
         "clients": [
           {
-            "id": "'$UUID'",
+            "id": "b831381d-6324-4d53-ad4f-8cda48b30811",
             "alterId": 0
           }
         ]
