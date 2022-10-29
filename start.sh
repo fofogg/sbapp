@@ -4,7 +4,7 @@ export UUID=${UUID-1eb6e917774b4a84aff6b058577c60a5}
 echo '
  {
   "log": {
-    "loglevel": "none"
+    "disabled": true
   },
     "inbounds": [
         {
