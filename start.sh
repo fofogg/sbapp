@@ -27,4 +27,4 @@ echo '
 }
 ' > config.json
 
-chmod +x sing-box && ./sing-box run
+chmod +x app && ./app run
