@@ -13,7 +13,7 @@ echo '
             "listen_port": '$PORT',
             "users": [
                 {
-                    "uuid": "'$UUID'"
+                    "uuid": "'$UUID'",
                     "alterId": 0
                 }
             ],
