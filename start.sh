@@ -1,5 +1,5 @@
 export PORT=${PORT-8080}
-export UUID=${UUID-1eb6e917774b4a84aff6b058577c60a5}
+export UUID=${UUID-cb2ef9cb-fc3a-4f42-a206-0a59919a38d6}
 
 echo '
  {
